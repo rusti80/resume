@@ -20,5 +20,197 @@ font-family: 'Poppins', sans-serif;
     padding: 0;
     font-family: 'Fira Sans', sans-serif;
     text-align: center;
-    color: seashell;
+    color: black;
+    background-color: slategray;
 }
+
+/*Logo-Styling*/
+.logo {
+    padding-block: 5px;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+}
+
+/*HEADER STYLING*/
+/*when the mouse hovers over a menu item show what's going on*/
+header ul a:hover {
+    background-color: #afd0f5;
+}
+
+header {
+    background-color: slategrey;
+}
+
+header ul {
+    list-style: none;
+}
+
+/*we want our menu items stacked on top of each other in the nav bar on a mobile*/
+header ul a {
+    display: block;
+    padding: 20px 35px;
+    text-decoration: none;
+    text-align: center;
+}
+
+header div {
+    display: flex;
+    justify-content: flex-start;
+}
+
+header div img {
+    position: relative;
+}
+
+/* By default, in mobile view, have the flyout panel hidden */
+.flyout-panel-hidden {
+    display: none;
+}
+
+/* When the button is clicked, add this style */
+.flyout-panel-visible {
+    display: block;
+}
+
+/*Different screen sizing and styles*/
+@media (min-width: 375px) and (max-width: 768px) {
+    header div img {
+        margin: auto;
+    }
+
+    #menu-button {
+        background-color: #F86FB5;
+    }
+
+    #menu-button:hover {
+        background-color: #afd0f5;
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    main h1 {
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+
+    /* Override all the toggles in full screen and just show the menu   */
+    #flyout-panel {
+        display: flex;
+    }
+
+    #menu-button {
+        display: none;
+    }
+
+    article.card {
+        display: inline;
+    }
+}
+
+/* Styling the Buttons */
+
+button {
+    display: inline-block;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover,
+button:focus {
+    background: #afd0f5;
+}
+
+button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+/*Nav bar styling*/
+nav ul {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: white;
+    background-color: #F86FB5;
+    display: flex;
+    list-style: none;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+/*Insert and style a responsive search bar*/
+nav .search-container {
+    float: right;
+  }
+  
+  nav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+  }
+  
+  nav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  nav .search-container button:hover {
+    background: #ccc;
+  }
+  
+
+#breadcrumb ul {
+    background-color: transparent;
+    padding: .75rem;
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    list-style: none;
+    display: flex;
+}
+
+/* Breadcrumb Navigation and styling */
+nav#breadcrumb {
+    margin-bottom: 0.5em;
+}
+
+nav#breadcrumb * {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 1.25rem;
+    align-items: center;
+}
+
+nav#breadcrumb li {
+    margin-left: 1em;
+}
+
+nav#breadcrumb li:not([aria-current])::after {
+    content: "⯈";
+    margin-left: 1em;
+}
+
+nav#breadcrumb a:hover,
+nav.breadcrumb a:focus {
+    background-color: #afd0f5;
+    outline-offset: 0.25rem;
+}
+
+
+
